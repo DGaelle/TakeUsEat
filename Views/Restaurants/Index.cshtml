@@ -1,0 +1,108 @@
+﻿@model IEnumerable<AfpEat.Restaurant>
+
+@{
+ 
+}
+
+<h2>Liste des Restaurants et des Types de Cuisine</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdTypeCuisine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Responsable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodePostal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ville)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.ActionLink(item.Nom, "Details",  "Restaurants", new { id = item.IdRestaurant },new { @class = "elements" }) 
+    </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.Nom)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdTypeCuisine)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Responsable)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Telephone)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mobile)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adresse)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CodePostal)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ville)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Password)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Login)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TypeCuisine.Nom)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.IdRestaurant }) |
+        @Html.ActionLink("Details", "Details", new { id = item.IdRestaurant }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.IdRestaurant })
+    </td>
+</tr>
+}
+
+</table>

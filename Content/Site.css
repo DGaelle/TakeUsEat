@@ -1,0 +1,68 @@
+﻿body {
+    padding-top: 5rem;
+  
+}
+.bg-custom-afpa {
+    background-image: linear-gradient(15deg, #44a33d 0%, #87bb34 100%);
+}
+
+/*.bg-button {
+    background-color: #e3007e;
+    color: white;
+}
+
+.footer {
+    background-color: #f5f5f5;
+}
+
+.btn-outline-pink {
+    border-color: #e3007e;
+    color: #e3007e;
+}
+
+    .btn-outline-pink:hover {
+        background-color: #e3007e;
+        color: white;
+    }
+
+.btn-outline-green {
+    border-color: #44a33d;
+    color: #44a33d;
+}
+
+    .btn-outline-green:hover {
+        background-color: #44a33d;
+        color: white;
+    }
+
+.dataTables_wrapper {
+    margin-bottom: 3rem;
+}
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal !important;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+
+}
