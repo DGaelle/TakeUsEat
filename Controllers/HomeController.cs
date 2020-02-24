@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AfpEat.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -34,6 +35,16 @@ namespace AfpEat.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult Panier()
+        {
+            List<ProduitPanier> panier = (List<ProduitPanier>)HttpContext.Application[Session.SessionID];
+
+            return View(panier);
+        }
+        public ActionResult PanierAjax()
+        {
             return View();
         }
     }

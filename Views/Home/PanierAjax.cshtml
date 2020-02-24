@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "PanierAjax";
+}
+
+<h2>PanierAjax</h2>
+
+<div id="panierAjax"></div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+                $.ajax({
+                    url: '@Url.Action("GetProduits", "SW")',
+                    type: 'POST',
+                    data: JSON.stringify({ idSession: '@Session.SessionID' }),
+                    dataType: 'json', //on désire recevoir du HTML
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (data) {
+
+                    },
+                    error: () => alert("Error")
+                    //error: function () {
+                    //    alert("Error");
+                    //}
+                });
+
+        });
+
+    </script>
+ 
