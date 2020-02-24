@@ -17,10 +17,11 @@ namespace AfpEat.Controllers
             //on recupere tous les restos de la bdd vers la page d'accueil
             //ViewBag.Restaurants = db.Restaurants.ToList();
             ViewBag.TypeCuisines = db.TypeCuisines.ToList();
+            
 
             //var typeCuisines=db.TypeCuisines.ToList();
             //return View();
-           return View(db.Restaurants.ToList());
+            return View(db.Restaurants.ToList());
         }
 
         public ActionResult Menu()
