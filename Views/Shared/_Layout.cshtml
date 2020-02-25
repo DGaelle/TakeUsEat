@@ -12,7 +12,8 @@
 <body class="d-flex flex-column">
     <nav class="navbar navbar-dark bg-custom-afpa navbar-expand-md fixed-top">
         <a class="navbar-brand" href="#">
-            <img src="~/Images/logoAfpa.png" height="30" alt="logo">AfpEat</a>
+            <img src="~/Images/logoAfpa.png" height="30" alt="logo"><h5 style="font-weight:bold; color:white"></h5>Eat
+        </a>
         <div class="collapse navbar-collapse" id="navbar-list-2">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -24,7 +25,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("Panier","Home")">Panier</a>
                 </li>
-         
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown link
@@ -34,8 +35,8 @@
                     </div>
                 </li>
             </ul>
-            </div>
-      
+        </div>
+
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
@@ -51,6 +52,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -13,5 +13,6 @@ namespace AfpEat.Models
             public decimal Prix { get; set; }
             public int Quantite { get; set; }
             public string Photo { get; set; }
+            public int IdRestaurant { get; set; }
         }
     }

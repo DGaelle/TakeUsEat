@@ -23,20 +23,17 @@ namespace AfpEat.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Connexion([Bind(Include = "Login,Password")] Utilisateur utilisateur)
+        public ActionResult Connexion([Bind(Include = "Matricule,Password")] Utilisateur utilisateur)
         {
             if (ModelState.IsValid)
             {
 
-                var utilisateurs = db.Utilisateurs.Where(u => u.Matricule == utilisateur.Matricule
-                && u.Password == utilisateur.Password).ToList();
+                Utilisateur user= db.Utilisateurs.FirstOrDefault(u => u.Matricule == utilisateur.Matricule
+                && u.Password == utilisateur.Password);
 
-                if (utilisateurs != null && utilisateurs.Count() == 1)
+                if (user != null)
                 {
-                    utilisateur = utilisateurs.First();
-
-                    HttpContext.Session.Add("Utilisateur", utilisateur);
-
+                    Session["Utilisateur"] = user;
                     return RedirectToAction("Index", "Home");
                 }
                 else
